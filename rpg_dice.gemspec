@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Will Gretz"]
   s.date = %q{2011-06-12}
-  s.description = %q{Ruby code to roll varying amounts of polyhedral dice.}
+  s.description = %q{Ruby code to roll varying amounts of polyhedral.}
   s.email = %q{me@willgretz.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/lib/dice.rb",
     "lib/rpg_dice.rb",
+    "rpg_dice.gemspec",
     "spec/rpg-dice_spec.rb",
     "spec/spec_helper.rb"
   ]
