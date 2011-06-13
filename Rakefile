@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/WGretz/rpg-dice"
   gem.license = "MIT"
   gem.summary = %Q{An RPG Dice Library}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Ruby code to roll varying amounts of polyhedral.}
   gem.email = "me@willgretz.com"
   gem.authors = ["Will Gretz"]
   # dependencies defined in Gemfile
