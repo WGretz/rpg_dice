@@ -5,6 +5,7 @@ class Dice
   @@max_dice = nil
   @@max_sides = nil
   
+  
   def initialize(num_of_dice,sides, options={})
     options = filter_options(options)
     raise ArgumentError, "Your sides exceeds the maximum number of sides allowed" if @@max_sides && sides > @@max_sides
@@ -14,18 +15,21 @@ class Dice
   end
   
   def results
-    return @results if @results
+    return @results.inject {|sum,x| sum+=x} if @results
     @results = []
     @num_of_dice.times do
       @results << rand(sides) + 1
     end
-    return @results = @results.inject {|sum,x| sum+=x}
+    return @results.inject {|sum,x| sum+=x}
   end
   
   def reroll
     @results = nil
     return results
   end
+  
+  # Parses a dice string and returns a dice object
+  # More documentation to come later
   
   def self.parse(string)
     dice_regex = /(?<num_of_dice>\d*)d(?<num_of_sides>\d+)/
